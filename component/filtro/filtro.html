@@ -1,0 +1,98 @@
+
+
+<div class = "panel panel-default">
+   <div class = "panel-body">
+
+
+
+  <div ng-repeat="chip in chips" class="data">
+
+   <div class="chip">
+		<img src="http://pictures.solardestinations.com/images/packages/peru/cuz-hatumrumiyocstreet-200.jpg" alt="Person" width="96" height="96">
+		 {{chip.id}}
+		<span class="closebtn" onclick="this.parentElement.style.display='none'" ng-click="add(chip)">&times;</span>
+		</div>
+
+  </div>
+
+		
+		<input ng-change="search()"  type="text" ng-model="tipo">
+
+
+   </div>
+</div>
+
+
+<ul class="list-group">
+
+  <li ng-show='fil' ng-mouseenter="hover = true" ng-mouseleave="hover = false" class="list-group-item" ng-class='{active: hover}' ng-repeat="contact in datax" ng-click="addchip(contact,$index)">
+
+   <span><img src="http://pictures.solardestinations.com/images/packages/peru/cuz-hatumrumiyocstreet-200.jpg" class="img-responsive chip1" alt="Cinque Terre"></span> {{contact.id}} 
+
+  </li>
+
+</ul>
+
+
+<style type="text/css">
+
+
+  .data{
+
+    display: inline-block;
+  }
+  
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+  .chip1 {
+    display: inline-block;
+    /* padding: 0 25px; */
+    height: 33px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+input[type="text"] {
+  display: inline-block;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: solid 0px #c9c9c9;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+input[type="text"]:focus,
+input[type="text"].focus,
+.ng-pristine .ng-valid .ng-empty .ng-touched:focus{
+
+  border: none;
+ 
+}
+</style>
+
+

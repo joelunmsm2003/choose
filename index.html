@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>FountainJS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!--Libs-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+ 
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+
+    <!--Services-->
+    <script src="service/intereses.js"></script>
+
+    <!--Components-->
+    <script src="rutas.js"></script>
+
+    <script src="component/app/app.js"></script>
+    <script src="component/login/login.js"></script>
+    <script src="component/filtro/filtro.js"></script>
+  
+
+    <body ng-app="app" class='container'>
+    
+        <ui-view></ui-view>
+      
+    </body>
+
+
+</html>
+
