@@ -31,12 +31,35 @@ function Filtro(interesService,$scope,$filter) {
 
     }
 
-    $scope.add = function(data){
+    $scope.add = function(data,index){
 
       console.log('ajajaj',data)
 
+      $scope.chips.splice(index,1)
+
       $scope.datax.push(data)
+
+      $scope.sort_by('id',$scope.datax)
+
     }
+
+    $scope.sort_by = function(newSortingOrder,array) {
+
+
+        function sortByKey(array, key) {
+            return array.sort(function(a, b) {
+            var x = a[key]; var y = b[key];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+            });
+        }
+
+        $scope.datax = sortByKey(array, newSortingOrder);
+
+        console.log('Order...',$scope.datax)
+
+  
+    };
+
 
 
 

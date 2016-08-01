@@ -1,12 +1,27 @@
 angular
-  .module('app', ['ui.router','ngStorage'])
+  .module('app', ['ui.router','ngStorage','pascalprecht.translate'])
   .service('interesService', interesService)
   .config(routesConfig);
 
 /** @ngInject */
-function routesConfig($stateProvider, $urlRouterProvider, $locationProvider,$httpProvider) {
+function routesConfig($stateProvider, $urlRouterProvider, $locationProvider,$httpProvider,$translateProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
+
+  // Languages
+
+  $translateProvider.translations('en', {
+    'TITLE': 'Hello',
+    'FOO': 'This is a paragraph'
+  });
+ 
+  $translateProvider.translations('de', {
+    'TITLE': 'Hallo',
+    'FOO': 'Dies ist ein Absatz'
+  });
+ 
+  $translateProvider.preferredLanguage('de');
+
 
   $stateProvider
     .state('app', {
