@@ -13,9 +13,6 @@ function Hoteldetail($scope) {
 
 
 
-  
-
-
   console.log('data.......',this.hotels)
 
   $scope.hotel = this.hotels
