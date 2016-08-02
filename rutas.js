@@ -26,8 +26,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider,$htt
   $stateProvider
     .state('app', {
       url: '/',
-      template: '<app></app>'
+      template: '<home></home>'
     });
+    
+
+
 
 	 $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {
 	return {
